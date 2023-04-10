@@ -105,6 +105,35 @@ else
     Console.WriteLine("Array doesn't have prime number");
 }
 
+var numbers = new List<int>();
+var n = 0;
+
+Console.WriteLine("Ban muon nhap bao nhieu so nguyen? ");
+string? buffer = Console.ReadLine();
+if (buffer.Length !=0)
+{
+    n = int.Parse(buffer);
+}
+
+//for (int i = 1; i <= n; i++)
+//{
+//    Console.Write($"Nhap so thu {i}: ");
+//    buffer = Console.ReadLine();
+//    if (buffer.Length != 0)
+//    {
+//        int number = int.Parse(buffer);
+//        numbers.Add(number);
+//    }
+//}
+
+var rng = new Random(); // Random number generator
+const int Maximum = 100;
+for (int i = 1; i < n; i++)
+{
+    Console.WriteLine(rng.Next(Maximum));
+}
+
+
 bool isPrime(int number)
 {
     bool result = false;
