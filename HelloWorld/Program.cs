@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 // Console.WriteLine("Hello, World!");
 
+// Hàm tính tổng các số từ a đến b
 int calc(int a, int b)
 {
     int sum = 0;
@@ -11,11 +12,13 @@ int calc(int a, int b)
     return sum;
 }
 
+// Hàm cộng số 10 vào biến number dùng ref
 void update(ref int number) // out
 {
     number += 10;
 }
 
+// Hàm trả về giá trị cho biến life
 void giveMeaning(out string life)
 {
     life = "find purpose";
