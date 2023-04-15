@@ -128,7 +128,7 @@ if (buffer.Length !=0)
 
 var rng = new Random(); // Random number generator
 const int Maximum = 100;
-for (int i = 1; i < n; i++)
+for (int i = 1; i <= n; i++)
 {
     Console.WriteLine(rng.Next(Maximum));
 }
