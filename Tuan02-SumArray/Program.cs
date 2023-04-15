@@ -25,3 +25,8 @@ Console.WriteLine(result);
 int a = -99;
 int result_2 = a > 0 ? a : -a;
 Console.WriteLine(result_2);
+
+// Kiểu dữ liệu ?
+int? a_3 = null;
+int result_3 = a_3 ?? 99; // a != null ? a : 99;
+Console.WriteLine(result_3);
