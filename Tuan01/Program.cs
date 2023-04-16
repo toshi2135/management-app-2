@@ -1,105 +1,164 @@
 ﻿// See https://aka.ms/new-console-template for more information
 // Console.WriteLine("Hello, World!");
-Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-// 1. Phát sinh ngẫu nhiên một số nguyên n thuộc đoạn [10, 20]
-var rng = new Random();
-const int min = 10;
-const int max = 20;
-int n = rng.Next(min, max + 1);
-Console.WriteLine($"Số nguyên n là {n}");
-
-// 2. Phát sinh ngẫu nhiên n số nguyên lưu vào mảng List<int> numbers. Mỗi số nguyên có miền giá trị trong đoạn [5-100]
-List<int> numbers = new List<int>();
-for (int i = 0; i < n; i++)
+// Hàm tính tổng các số từ a đến b
+int calc(int a, int b)
 {
-    numbers.Add(rng.Next(5, 101));
-}
-
-// 3. In ra màn hình danh sách các số nguyên vừa phát sinh
-Console.WriteLine("Mảng số nguyên vừa tạo là:");
-foreach (var number in numbers)
-{
-    Console.Write($"{number} ");
-}
-Console.WriteLine();
-
-// 4. In ra màn hình tổng các số nguyên vừa nhập
-int sum = 0;
-foreach (var number in numbers)
-{
-    sum += number;
-}
-Console.WriteLine($"Tổng các số nguyên vừa nhập là {sum}");
-
-// 5. Kiểm tra mảng có toàn bộ là số lẻ hay không
-bool isOdd = true;
-foreach (var number in numbers)
-{
-    if (number % 2 == 0)
+    int sum = 0;
+    for (int i = a; i <= b; i++)
     {
-        isOdd = false;
+        sum += i;
+    }
+    return sum;
+}
+
+// Hàm cộng số 10 vào biến number dùng ref
+void update(ref int number) // out
+{
+    number += 10;
+}
+
+// Hàm trả về giá trị cho biến life
+void giveMeaning(out string life)
+{
+    life = "find purpose";
+}
+
+const int start = 1;
+int end = 10;
+int sum = calc(start, end);
+
+update(ref sum);
+
+string life = null;
+giveMeaning(out life);
+
+
+Console.WriteLine($"Sum of {start} to {end} is {sum}");
+
+int[] a = new int[3];
+try
+{
+    a[0] = 1;
+    a[1] = 2;
+    a[2] = 3;
+    a[3] = 10; // error
+    Console.WriteLine(a.Length);
+} catch(Exception ex) 
+{
+    Console.WriteLine($"Cannot work with array. Reason {ex.Message}");
+}
+
+int[] b =
+{
+    3, 4, 5, 6, 7, 8
+};
+Console.WriteLine(b.Length);
+
+int bSum = 0;
+
+for (int i = 0; i < b.Length; i++)
+{
+    bSum += b[i];
+}
+
+Console.WriteLine($"Sum of b is {bSum}");
+
+// Đếm các số chẵn
+int evenCount =  0;
+for (int i = 0; i < b.Length; i++)
+{
+    if (i % 2 == 0)
+    {
+        evenCount++;
+    }
+}
+
+Console.WriteLine($"Array b has {evenCount} even numbers");
+
+// Lính canh - Tìm số lớn nhất trong mảng
+int max = b[0];
+
+for (int i = 1; i < b.Length; i++)
+{
+    if (b[i] > max)
+    {
+        max = b[i];
+    }
+}
+Console.WriteLine($"Biggest number of bis {max}");
+
+// Kiểm tra có số nguyên tố trong mảng hay không?
+bool hasPrimeFlag = false;
+for (int i = 0; i < b[i]; i++)
+{
+    if (isPrime(b[i]))
+    {
+        hasPrimeFlag = true;
         break;
     }
 }
-if (isOdd)
+
+if (hasPrimeFlag)
 {
-    Console.WriteLine("Mảng toàn số lẻ");
+    Console.WriteLine("Array has prime numbers");
 }
 else
 {
-    Console.WriteLine("Mảng không toàn số lẻ");
+    Console.WriteLine("Array doesn't have prime number");
 }
 
-// 6. Đếm số lượng số chính phương trong mảng
-// Hàm kiểm tra số chính phương
-bool isSquare(int number)
+var numbers = new List<int>();
+var n = 0;
+
+Console.WriteLine("Ban muon nhap bao nhieu so nguyen? ");
+string? buffer = Console.ReadLine();
+if (buffer.Length !=0)
 {
-    int sqrt = (int)Math.Sqrt(number);
-    return sqrt * sqrt == number;
+    n = int.Parse(buffer);
 }
 
-int squareCount = 0;
-foreach (var number in numbers)
+//for (int i = 1; i <= n; i++)
+//{
+//    Console.Write($"Nhap so thu {i}: ");
+//    buffer = Console.ReadLine();
+//    if (buffer.Length != 0)
+//    {
+//        int number = int.Parse(buffer);
+//        numbers.Add(number);
+//    }
+//}
+
+var rng = new Random(); // Random number generator
+const int Maximum = 100;
+for (int i = 1; i <= n; i++)
 {
-    if (isSquare(number))
-    {
-        squareCount++;
-    }
+    Console.WriteLine(rng.Next(Maximum));
 }
-Console.WriteLine($"Mảng có {squareCount} số chính phương");
 
-// 7. Tìm số nguyên tố lớn nhất của mảng
-// Hàm kiểm tra số nguyên tố
+
 bool isPrime(int number)
 {
+    bool result = false;
     if (number < 2)
     {
         return false;
     }
-    for (int i = 2; i <= Math.Sqrt(number); i++)
+    else
     {
-        if (number % i == 0)
+        int count = 0;
+        for (int i = 1; i < number; i++)
         {
-            return false;
+            if (number % i == 0)
+            {
+                count++;
+            }
+        }
+        
+        if (count == 2)
+        {
+            result = true;
         }
     }
-    return true;
-}
-
-int maxPrime = -1;
-foreach (var number in numbers)
-{
-    if (isPrime(number) && number > maxPrime)
-    {
-        maxPrime = number;
-    }
-}
-if (maxPrime == -1)
-{
-    Console.WriteLine("Mảng không có số nguyên tố");
-}
-else
-{
-    Console.WriteLine($"Số nguyên tố lớn nhất của mảng là {maxPrime}");
+    return result;
 }

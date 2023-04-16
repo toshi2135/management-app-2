@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Globalization;
 using System.Text;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -83,3 +84,16 @@ foreach (string entry in entries)
     sum += number;
 }
 Console.WriteLine(sum);
+
+// String interpolation
+string firstName = "Tran";
+string lastName = "Quang";
+
+string fullName = $"{firstName} {lastName}";
+Console.WriteLine(fullName);
+
+// Format string in VND
+CultureInfo info = CultureInfo.GetCultureInfo("vi-VN"); // en-US, vi-VN
+int money = 1250000;
+string message = money.ToString("#,###", info.NumberFormat);
+Console.WriteLine(message);
