@@ -8,5 +8,7 @@
         Title="My first WPF app" Height="450" Width="800">
     <Canvas>
         <Label Content="Hello" Canvas.Left="381" Canvas.Top="204" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="helloButton" Width="80" Height="35" Click="helloButton_Click" Content="Hello"/>
+        <Image Width="100" Height="100" Source="/Image"/>
     </Canvas>
 </Window>

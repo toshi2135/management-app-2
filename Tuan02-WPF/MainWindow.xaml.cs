@@ -24,5 +24,10 @@ namespace Tuan02_WPF
         {
             InitializeComponent();
         }
+
+        private void helloButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello World!");
+        }
     }
 }
