@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="My first WPF app" Height="450" Width="800">
     <Canvas>
-        <Label Content="Hello"/>
+        <Label Content="Hello" Canvas.Left="381" Canvas.Top="204" HorizontalAlignment="Center" VerticalAlignment="Top"/>
     </Canvas>
 </Window>
