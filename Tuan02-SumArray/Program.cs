@@ -44,56 +44,75 @@ Console.OutputEncoding = System.Text.Encoding.UTF8;
 //string result = builder.ToString();
 //Console.WriteLine(result);
 
-uint value = 2; // 0010
-uint twoTimes = value << 1; // 0100
-Console.WriteLine(twoTimes);
+//uint value = 2; // 0010
+//uint twoTimes = value << 1; // 0100
+//Console.WriteLine(twoTimes);
 
-uint flip = ~value;
-Console.WriteLine(flip);
+//uint flip = ~value;
+//Console.WriteLine(flip);
 
 // AND: 0 & * => 0
 // OR: 1 | * => 1
 // XOR: 0 ^ 0 => 0, 1 ^ 1 => 0, 0 ^ 1 => 1, 1 ^ 0 => 1
 
-const string Separator = " ";
+//const string Separator = " ";
+//string haystack = "The quick brown fox jumps over the lazy dog";
+//string[] tokens = haystack.Split(new string[] { Separator }, StringSplitOptions.None);
+//foreach (string token in tokens)
+//{
+//    Console.WriteLine(token);
+//}
 
-string haystack = "The quick brown fox jumps over the lazy dog";
-string[] tokens = haystack.Split(new string[] { Separator }, StringSplitOptions.None);
-foreach (string token in tokens)
-{
-    Console.WriteLine(token);
-}
+//const string Separator = "/";
+//string haystack = "12 //24";
+//string[] tokens = haystack.Split(new string[] { Separator }, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
+//foreach (string token in tokens)
+//{
+//    Console.WriteLine(token);
+//}
 
-const string Separator_2 = "/";
-
-string haystack_2 = "12 //24";
-string[] tokens_2 = haystack_2.Split(new string[] { Separator }, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
-foreach (string token in tokens_2)
-{
-    Console.WriteLine(token);
-}
-
-string data = "5, 3, 8, 11, -12, 3";
-int sum = 0;
-
-string[] entries = data.Split(new char[] { ',' }, StringSplitOptions.None);
-
-foreach (string entry in entries)
-{
-    int number = int.Parse(entry);
-    sum += number;
-}
-Console.WriteLine(sum);
+//string data = "5, 3, 8, 11, -12, 3";
+//int sum = 0;
+//string[] entries = data.Split(new char[] { ',' }, StringSplitOptions.None);
+//foreach (string entry in entries)
+//{
+//    int number = int.Parse(entry);
+//    sum += number;
+//}
+//Console.WriteLine(sum);
 
 // String interpolation
-string firstName = "Tran";
-string lastName = "Quang";
-
-string fullName = $"{firstName} {lastName}";
-Console.WriteLine(fullName);
+//string firstName = "Tran";
+//string lastName = "Quang";
+//string fullName = $"{firstName} {lastName}";
+//Console.WriteLine(fullName);
 
 // Format string in VND
-CultureInfo info = CultureInfo.GetCultureInfo("vi-VN"); // en-US, vi-VN
-int money = 1250000;
-string message = money.ToString("#,###", info.NumberFormat);
-Console.WriteLine(message);
+//CultureInfo info = CultureInfo.GetCultureInfo("vi-VN"); // en-US, vi-VN
+//int money = 1250000;
+//string message = money.ToString("#,###", info.NumberFormat);
+//Console.WriteLine(message);
+
+// String search
+//string haystack = "The quick brown fox jumps over the lazy dog";
+//string needle = "brown";
+//int foundPosition = haystack.IndexOf(needle);
+//Console.WriteLine(foundPosition);
+
+// String split
+string haystack = "C:\\Documents\\Photos\\Test.jpg";
+//string folder = "C:\\Documents\\Photos";
+//string fileName = "Test.jpg";
+//int lastPos = haystack.LastIndexOf("\\");
+//Console.WriteLine(lastPos);
+//string folder = haystack.Substring(0, lastPos);
+//string fileName = haystack.Substring(lastPos + 1);
+//Console.WriteLine(folder);
+//Console.WriteLine(fileName);
+
+// Using FileInfo
+FileInfo f = new FileInfo(haystack);
+string folder = f.DirectoryName;
+string fileName = f.Name;
+Console.WriteLine(folder);
+Console.WriteLine(fileName);
