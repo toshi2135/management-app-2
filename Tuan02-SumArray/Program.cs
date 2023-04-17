@@ -117,5 +117,6 @@ string haystack = "C:\\Documents\\Photos\\Test.jpg";
 //Console.WriteLine(folder);
 //Console.WriteLine(fileName);
 
+// Using DateTime
 DateTime now = DateTime.Now;
 Console.WriteLine(now.ToString("dd/MM/yyyy"));
