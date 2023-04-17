@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Tuan02_WPF"
         mc:Ignorable="d"
         Title="My first WPF app" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <Canvas>
+        <Label Content="Hello"/>
+    </Canvas>
 </Window>
