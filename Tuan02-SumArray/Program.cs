@@ -111,8 +111,11 @@ string haystack = "C:\\Documents\\Photos\\Test.jpg";
 //Console.WriteLine(fileName);
 
 // Using FileInfo
-FileInfo f = new FileInfo(haystack);
-string folder = f.DirectoryName;
-string fileName = f.Name;
-Console.WriteLine(folder);
-Console.WriteLine(fileName);
+//FileInfo f = new FileInfo(haystack);
+//string folder = f.DirectoryName;
+//string fileName = f.Name;
+//Console.WriteLine(folder);
+//Console.WriteLine(fileName);
+
+DateTime now = DateTime.Now;
+Console.WriteLine(now.ToString("dd/MM/yyyy"));
