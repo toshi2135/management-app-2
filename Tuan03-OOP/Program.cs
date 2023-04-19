@@ -22,6 +22,13 @@ var Charles = new Employee()
     FirstName = "Charles"
 };
 
+var acc = new BankAccount()
+{
+    Balance = 100000
+};
+
+Console.WriteLine($"Ban co the rut {acc.AvailableBalance}");
+
 class Employee
 {
     // Encapsulation - Data hiding
@@ -69,4 +76,44 @@ class Employee
     public string LastName { get; set; }
     public string Tel { get; set; }
     public string Info { get; set; }
+}
+
+class Circle
+{
+    public float Radius { get; set; }
+    // Derivative attributes
+    public float Diameter { get { return Radius * 2; }}
+    public float Area { get { return (float)Math.PI * Radius * Radius; }}
+    public float Perimeter { get { return (float)Math.PI * Radius * 2; }}
+}
+
+class BankAccount
+{
+    private int _balance = 0;
+
+    public int Balance
+    {
+        get { return _balance; }
+        set { _balance = value; }
+    }
+
+    public int AvailableBalance
+    {
+        get
+        {
+            int result = 0;
+
+            if (_balance > 50000)
+            {
+                result = _balance - 50000;
+
+                if (result % 50000 != 0)
+                {
+                    result = 0;
+                }
+            }
+
+            return result;
+        }
+    }
 }
