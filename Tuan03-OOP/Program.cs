@@ -1,12 +1,72 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
+
+Employee Alice = new Employee();
+Alice.FirstName = "Alice";
+Alice.LastName = "Maive";
+Alice.Tel = "0977281721";
+
+Employee Bob = new Employee()
+{
+    FirstName = "Bob",
+    LastName = "Tayson",
+    Tel = "0909881254"
+};
+
+// Nếu biểu thức bên phải có kiểu rồi
+// Thì có thể khai báo var
+// ==> Tính dễ đọc
+var Charles = new Employee()
+{
+    FirstName = "Charles"
+};
+
 class Employee
 {
-    // Attributes
-    public string FirstName;
-    public string LastName;
-    public string Tel;
-}
+    // Encapsulation - Data hiding
+    // Nếu được - Hãy che giấu các thuộc tính
+    // Không cung cấp truy cập trực tiếp
 
-Employee Alice = new Employee(); //
+    // Attributes _camelCase
+    //#region Attributes
+    //private string _firstName;
+    //private string _lastName;
+    //private string _tel;
+    //private string _info; // Attribute / Backup Field 
+    //#endregion
+
+    //#region Property
+    //public string FirstName
+    //{
+    //    get { return _firstName; }
+    //    set { _firstName = value; }
+    //}
+    //public string LastName
+    //{
+    //    get { return _firstName; }
+    //    set { _firstName = value; }
+    //}
+    //public string Tel
+    //{
+    //    get { return _tel; }
+    //    set { _tel = value; }
+    //}
+    //// Kiểu cũ
+    //public string getInfo() { return _info; }
+    //public void setInfo(string info) { _info = info; }
+
+    //// Kiểu C#
+    //public string info // Property
+    //{
+    //    get { return _info; }
+    //    set { _info = value; }
+    //}
+    //#endregion
+
+    // Kiểu ngắn gọn
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Tel { get; set; }
+    public string Info { get; set; }
+}
