@@ -82,9 +82,14 @@ class Circle
 {
     public float Radius { get; set; }
     // Derivative attributes
-    public float Diameter { get { return Radius * 2; }}
-    public float Area { get { return (float)Math.PI * Radius * Radius; }}
-    public float Perimeter { get { return (float)Math.PI * Radius * 2; }}
+    //public float Diameter { get { return Radius * 2; }}
+    //public float Area { get { return (float)Math.PI * Radius * Radius; }}
+    //public float Perimeter { get { return (float)Math.PI * Radius * 2; }}
+
+    // Lambda expression
+    public float Diameter => Radius * 2;
+    public float Area => (float)Math.PI * Radius * Radius;
+    public float Perimeter => (float)Math.PI * Radius * 2;
 }
 
 class BankAccount
