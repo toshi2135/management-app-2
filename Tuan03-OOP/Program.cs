@@ -29,6 +29,41 @@ var acc = new BankAccount()
 
 Console.WriteLine($"Ban co the rut {acc.AvailableBalance}");
 
+Alice.Quit();
+Bob.Quit();
+Charles.Quit();
+
+Employee.Check("The quick brown fox");
+
+Point start = new Point()
+{
+    X = 1,
+    Y = 1,
+};
+
+Point end = new Point()
+{
+    X = 2,
+    Y = 2,
+};
+
+float distance = Point.CalcDistance(start, end);
+Console.WriteLine($"Khoang cach hai diem la: {distance}");
+
+class Point
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+
+    public static float CalcDistance(Point from, Point to)
+    {
+        float dx = from.X - to.X;
+        float dy = from.Y - to.Y;
+        float result = (float) Math.Sqrt(dx * dx + dy * dy);
+        return result;
+    }
+}
+
 class Employee
 {
     // Encapsulation - Data hiding
@@ -76,6 +111,17 @@ class Employee
     public string LastName { get; set; }
     public string Tel { get; set; }
     public string Info { get; set; }
+
+    // Static function
+    public void Quit() // Mức thể hiện - Cần tạo mới đối tượng
+    {
+        Console.WriteLine("I'm quit");
+    }
+
+    public static void Check (string data) // Gọi thông qua tên lớp
+    {
+
+    }
 }
 
 class Circle
@@ -122,3 +168,4 @@ class BankAccount
         }
     }
 }
+
