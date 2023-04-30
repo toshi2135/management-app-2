@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
 
-using System.Net.Http.Headers;
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 Point3D start = new Point3D()
 {
@@ -47,15 +47,69 @@ List<Shape> shapes = new List<Shape>
 
 for (int i = 0; i < shapes.Count; i++)
 {
-    Console.WriteLine(shapes[i].perimeter());
+    Console.WriteLine($"Chu vi: {shapes[i].perimeter()}, Diện tích: {shapes[i].area()}");
+}
+Console.WriteLine();
+
+List<Employee> employees = new List<Employee>()
+{
+    new Manager() {Name = "Jack", Employees = 3, PaymentPerEmployee = 1000000, Base = 5000000 },
+    new DailyEmployee() {Name = "John", Days = 5, PaymentPerDay = 2000000 },
+    new DailyEmployee() {Name = "Oliver", Days = 8, PaymentPerDay = 1500000 },
+    new ProductEmployee() {Name = "Linda", Products = 20, PaymentPerProduct = 500000 }
+};
+for (int i = 0; i < employees.Count; i++)
+{
+    Console.WriteLine($"Nhân viên {employees[i].Name} có lương {employees[i].Salary()}");
 }
 
 
 //-----------------Kết thúc nội dung hàm main
 
-abstract class Shape
+abstract class Employee
+{
+    public string Name { get; set; }
+
+    public abstract float Salary();
+}
+
+class DailyEmployee : Employee
+{
+    public int Days { get; set; }
+    public int PaymentPerDay { get; set; }
+    public override float Salary()
+    {
+        return Days * PaymentPerDay;
+    } 
+}
+
+class ProductEmployee : Employee
+{
+    public int Products { get; set; }
+    public int PaymentPerProduct { get; set; }
+
+    public override float Salary()
+    {
+        return Products * PaymentPerProduct;
+    }
+}
+
+class Manager : Employee
+{
+    public int Employees { get; set; }
+    public int PaymentPerEmployee { get; set; }
+    public int Base { get; set; }
+
+    public override float Salary()
+    {
+        return Base + Employees * PaymentPerEmployee;
+    }
+}
+
+    abstract class Shape
 {
     public abstract float perimeter();
+    public abstract float area();
 }
 
 class Rectangle : Shape
@@ -66,6 +120,10 @@ class Rectangle : Shape
     {
         return 2 * (Width + Height);
     }
+    public override float area()
+    {
+        return Width * Height;
+    }
 }
 
 class Square : Shape
@@ -74,6 +132,10 @@ class Square : Shape
     public override float perimeter()
     {
         return 4 * Length;
+    }
+    public override float area()
+    {
+        return Length * Length;
     }
 }
 
