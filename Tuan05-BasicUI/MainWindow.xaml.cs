@@ -24,5 +24,10 @@ namespace Tuan05_BasicUI
         {
             InitializeComponent();
         }
+
+        private void welcomeButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

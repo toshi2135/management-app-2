@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tuan05_BasicUI"
         mc:Ignorable="d"
-        Title="HelloWorld" Height="300" Width="400">
-    <Grid>
-
-    </Grid>
+        Title="Dashboard" Height="300" Width="400" WindowStartupLocation="CenterScreen">
+    <Canvas>
+        <Label Content="Welcome" FontSize="40" FontWeight="Bold" FontFamily="Arial" Canvas.Left="108" Canvas.Top="26"/>
+        <Label Content="Họ và tên:" Canvas.Left="49" Canvas.Top="92" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <TextBox Name="nameTextBox" Padding="5, 5, 0, 0" Width="240" Height="35" Canvas.Left="118" Canvas.Top="87" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Button Name="welcomeButton" Click="welcomeButton_Click" Width="80" Height="30" Canvas.Left="160" Canvas.Top="142" Content="Click me" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+    </Canvas>
 </Window>
