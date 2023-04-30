@@ -3,14 +3,6 @@
 
 class Point2D
 {
-    public int x, y;
-    public Point2D(int x, int y)
-    {
-        this.x = x;
-        this.y = y;
-    }
-    public override string ToString()
-    {
-        return $"({x}, {y})";
-    }
+    public int X { get; set;}
+    public int Y { get; set;}
 }
