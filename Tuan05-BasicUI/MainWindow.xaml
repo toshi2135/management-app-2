@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tuan05_BasicUI"
         mc:Ignorable="d"
-        Title="Dashboard" Height="300" Width="400" WindowStartupLocation="CenterScreen">
+        Title="Dashboard" Height="300" Width="400" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Canvas>
         <Label Content="Welcome" FontSize="40" FontWeight="Bold" FontFamily="Arial" Canvas.Left="108" Canvas.Top="26"/>
         <Label Content="Họ và tên:" Canvas.Left="49" Canvas.Top="92" HorizontalAlignment="Left" VerticalAlignment="Center" />

@@ -31,5 +31,10 @@ namespace Tuan05_BasicUI
             string message = "Xin chào " + name;
             MessageBox.Show(message);
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Title = "Chương trình đã sẵn sàng";
+        }
     }
 }
