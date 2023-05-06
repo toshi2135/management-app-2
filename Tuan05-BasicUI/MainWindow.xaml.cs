@@ -34,6 +34,7 @@ namespace Tuan05_BasicUI
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //MessageBox.Show("Hiển thị xong thì mới chạy tiếp");
             Title = "Chương trình đã sẵn sàng";
         }
     }
