@@ -27,7 +27,9 @@ namespace Tuan05_BasicUI
 
         private void welcomeButton_Click(object sender, RoutedEventArgs e)
         {
-
+            string name = nameTextBox.Text;
+            string message = "Xin chào " + name;
+            MessageBox.Show(message);
         }
     }
 }
