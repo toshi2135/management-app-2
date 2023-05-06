@@ -29,7 +29,7 @@ namespace Tuan05_BasicUI
         {
             string name = nameTextBox.Text;
             string message = "Xin chào " + name;
-            MessageBox.Show(message);
+            MessageBox.Show(message, "Thông tin", MessageBoxButton.OKCancel);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
