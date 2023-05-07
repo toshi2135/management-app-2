@@ -5,8 +5,6 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTLTTuan05", "BTLTTuan05.csproj", "{5F6CBFA9-B89D-4A37-A9A2-BBF5AE1E68D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tuan05-BasicUI", "..\Tuan05-BasicUI\Tuan05-BasicUI.csproj", "{D5F537BC-451A-4DD6-8A9C-C4F0BE27C076}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{5F6CBFA9-B89D-4A37-A9A2-BBF5AE1E68D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F6CBFA9-B89D-4A37-A9A2-BBF5AE1E68D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F6CBFA9-B89D-4A37-A9A2-BBF5AE1E68D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D5F537BC-451A-4DD6-8A9C-C4F0BE27C076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5F537BC-451A-4DD6-8A9C-C4F0BE27C076}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5F537BC-451A-4DD6-8A9C-C4F0BE27C076}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5F537BC-451A-4DD6-8A9C-C4F0BE27C076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
