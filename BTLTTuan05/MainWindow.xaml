@@ -1,0 +1,19 @@
+﻿<Window x:Class="BTLTTuan05.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BTLTTuan05"
+        mc:Ignorable="d"
+        Title="Màn hình giới thiệu bản thân" Height="450" Width="280" Loaded="Window_Loaded">
+    <Canvas>
+        <Label Content="MSSV" Canvas.Left="20" Canvas.Top="68"/>
+        <TextBox x:Name="txtMSSV" Canvas.Left="86" Canvas.Top="72" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Họ và tên" Canvas.Left="20" Canvas.Top="99"/>
+        <TextBox x:Name="txtHoTen" Canvas.Left="86" Canvas.Top="103" Width="120"/>
+        <Image Source="Images/4.jpg" Width="100" Height="100" Canvas.Left="96" Canvas.Top="142" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Email" Canvas.Left="20" Canvas.Top="262" />
+        <TextBox x:Name="txtEmail" Canvas.Left="86" Canvas.Top="266" Width="120"/>
+        <Button x:Name="phoneButton" Content="Số điện thoại" Click="phoneButton_Click" Canvas.Left="93" Canvas.Top="308"/>
+    </Canvas>
+</Window>
