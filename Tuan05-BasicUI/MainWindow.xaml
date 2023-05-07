@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="Dashboard" Height="300" Width="400" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Canvas>
-        <Image Width="50" Height="50" Source="Images/4.jpg"/>
+        <Image Width="50" Height="50" Source="Images/4.jpg" Canvas.Left="178" Canvas.Top="82"/>
         <Label Content="Welcome" FontSize="40" FontWeight="Bold" FontFamily="Arial" Canvas.Left="108" Canvas.Top="26"/>
-        <Label Content="Họ và tên:" Canvas.Left="49" Canvas.Top="92" HorizontalAlignment="Left" VerticalAlignment="Center" />
-        <TextBox Name="nameTextBox" Padding="5, 5, 0, 0" Width="240" Height="35" Canvas.Left="118" Canvas.Top="87" HorizontalAlignment="Left" VerticalAlignment="Center" />
-        <Button Name="welcomeButton" Click="welcomeButton_Click" Width="80" Height="30" Canvas.Left="160" Canvas.Top="142" Content="Click me" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Button x:Name="loginButton" Click="loginButton_Click" Width="80" Height="30" Canvas.Left="160" Canvas.Top="204" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Họ và tên:" Canvas.Left="39" Canvas.Top="147" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <TextBox Name="nameTextBox" Padding="5, 5, 0, 0" Width="240" Height="35" Canvas.Left="108" Canvas.Top="142" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button Name="welcomeButton" Click="welcomeButton_Click" Width="80" Height="30" Canvas.Left="102" Canvas.Top="201" Content="Click me" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="loginButton" Click="loginButton_Click" Width="80" Height="30" Canvas.Left="213" Canvas.Top="201" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Canvas>
 </Window>
