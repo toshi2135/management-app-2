@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,22 +30,29 @@ namespace Tuan05_BasicUI
         {
             string name = nameTextBox.Text;
             string message = "Xin chào " + name;
-            MessageBoxResult choice = MessageBox.Show(message, "Thông tin", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
 
-            if (choice == MessageBoxResult.Yes)
+            //MessageBoxResult choice = MessageBox.Show(message, "Thông tin", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
+            //if (choice == MessageBoxResult.Yes)
+            //{
+            //    //MessageBox.Show("Bạn đã chọn Yes");
+            //    Title = "Bạn đã chọn Yes";
+            //}
+            //else if (choice == MessageBoxResult.No)
+            //{
+            //    //MessageBox.Show("Bạn đã chọn No");
+            //    Title = "Bạn đã chọn No";
+            //}
+            //else
+            //{
+            //    //MessageBox.Show("Bạn đã chọn Cancel");
+            //    Title = "Bạn đã chọn Cancel";
+            //}
+
+            // Hiển thị dialog chọn tập tin
+            var screen = new OpenFileDialog();
+            if (screen.ShowDialog() == true)
             {
-                //MessageBox.Show("Bạn đã chọn Yes");
-                Title = "Bạn đã chọn Yes";
-            }
-            else if (choice == MessageBoxResult.No)
-            {
-                //MessageBox.Show("Bạn đã chọn No");
-                Title = "Bạn đã chọn No";
-            }
-            else
-            {
-                //MessageBox.Show("Bạn đã chọn Cancel");
-                Title = "Bạn đã chọn Cancel";
+                MessageBox.Show(screen.FileName);
             }
         }
 
