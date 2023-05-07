@@ -11,5 +11,6 @@
         <Label Content="Họ và tên:" Canvas.Left="49" Canvas.Top="92" HorizontalAlignment="Left" VerticalAlignment="Center" />
         <TextBox Name="nameTextBox" Padding="5, 5, 0, 0" Width="240" Height="35" Canvas.Left="118" Canvas.Top="87" HorizontalAlignment="Left" VerticalAlignment="Center" />
         <Button Name="welcomeButton" Click="welcomeButton_Click" Width="80" Height="30" Canvas.Left="160" Canvas.Top="142" Content="Click me" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="loginButton" Click="loginButton_Click" Width="80" Height="30" Canvas.Left="160" Canvas.Top="204" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Canvas>
 </Window>

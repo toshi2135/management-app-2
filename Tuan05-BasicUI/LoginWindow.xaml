@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tuan05_BasicUI"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
+        Title="LoginWindow" Height="425" Width="527">
     <Canvas>
-        <Label Content="Login"/>
+        <Label Content="Login" FontSize="40" FontWeight="Bold" Canvas.Left="192" Canvas.Top="64"/>
+        <Label Content="Username" Canvas.Left="124" Canvas.Top="160" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox Name="usernameTextBox" Width="187" Height="35" Canvas.Left="192" Canvas.Top="155" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Password" Canvas.Left="124" Canvas.Top="244" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="passwordTextBox" Width="187" Height="35" Canvas.Left="192" Canvas.Top="239" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button Name="loginButton" IsDefault="True" Content="Login" Width="100" Height="36" Canvas.Left="124" Canvas.Top="314" Click="loginButton_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="cancelButton" IsDefault="True" Content="Cancel" Width="100" Height="35" Canvas.Left="264" Canvas.Top="314" Click="cancelButton_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Canvas>
 </Window>

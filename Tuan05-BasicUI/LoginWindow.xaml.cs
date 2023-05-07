@@ -19,9 +19,24 @@ namespace Tuan05_BasicUI
     /// </summary>
     public partial class LoginWindow : Window
     {
+        // Public property
+        public string Username { get; set; } = "";
         public LoginWindow()
         {
             InitializeComponent();
+        }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Lưu dữ liệu trước khi đóng màn hình
+            Username = usernameTextBox.Text;
+
+            DialogResult = true;
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
