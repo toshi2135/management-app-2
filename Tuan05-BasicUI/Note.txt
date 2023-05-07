@@ -1,0 +1,5 @@
+Bước 1: Quên chọn hình là Resource => Preview thấy, biên dịch ko
+
+Bước 2: Nhớ ra chuyển thành resource => Biên dịch vẫn không thấy
+=> Cache, không biên dịch ra file mới
+=> Giải pháp: Clean solution => Rebuild
