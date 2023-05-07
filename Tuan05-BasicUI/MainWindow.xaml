@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Dashboard" Height="300" Width="400" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Canvas>
+        <Image Width="50" Height="50" Source="Images/4.jpg"/>
         <Label Content="Welcome" FontSize="40" FontWeight="Bold" FontFamily="Arial" Canvas.Left="108" Canvas.Top="26"/>
         <Label Content="Họ và tên:" Canvas.Left="49" Canvas.Top="92" HorizontalAlignment="Left" VerticalAlignment="Center" />
         <TextBox Name="nameTextBox" Padding="5, 5, 0, 0" Width="240" Height="35" Canvas.Left="118" Canvas.Top="87" HorizontalAlignment="Left" VerticalAlignment="Center" />
