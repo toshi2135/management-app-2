@@ -14,21 +14,39 @@
         <TextBlock Text="Kim" Background="White"/> --><!--<HorizontalAlignment="Left" TextAlignment="Center" Width="200"--><!--
         <TextBlock Text="Mộc" Background="Green"/> --><!--Width="400"--><!--
         <TextBlock Text="Thủy" Background="Blue"/>
-        <TextBlock Text="Hỏa" Background="Yellow"/>
-        <TextBlock Text="Thổ" Background="Red"/> 
+        <TextBlock Text="Hỏa" Background="Red"/>
+        <TextBlock Text="Thổ" Background="Yellow"/> 
     </StackPanel>-->
     <!--<WrapPanel Background="Black" Orientation="Horizontal">
         <TextBlock Text="Kim" Width="100" Height="100" Background="White"/>
         <TextBlock Text="Mộc" Width="100" Height="100" Background="Green"/>
         <TextBlock Text="Thủy" Width="100" Height="100" Background="Blue"/>
-        <TextBlock Text="Hỏa" Width="100" Height="100" Background="Yellow"/>
-        <TextBlock Text="Thổ" Width="100" Background="Red"/>
+        <TextBlock Text="Hỏa" Width="100" Height="100" Background="Red"/>
+        <TextBlock Text="Thổ" Width="100" Background="Yellow"/>
     </WrapPanel>-->
-    <DockPanel Background="Black" LastChildFill="True">
-        <TextBlock Text="Kim" Margin="5" Background="White"/>
+    <!--<DockPanel Background="Black" LastChildFill="True">
+        <TextBlock Text="Kim" Margin="5" DockPanel.Dock="Right" Background="White"/>
+        <TextBlock Text="Thủy" Margin="5" DockPanel.Dock="Left" Background="Blue"/>
+        <TextBlock Text="Hỏa" Margin="5" DockPanel.Dock="Top" Background="Red"/>
+        <TextBlock Text="Thổ" Margin="5" DockPanel.Dock="Bottom" Background="Yellow"/>
         <TextBlock Text="Mộc" Margin="5" Background="Green"/>
-        <TextBlock Text="Thủy" Margin="5" Background="Blue"/>
-        <TextBlock Text="Hỏa" Margin="5" Background="Yellow"/>
-        <TextBlock Text="Thổ" Margin="5" Background="Red"/>
-    </DockPanel>
+    </DockPanel>-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Kim" Background="White"/>
+        <TextBlock Text="Thủy" Background="Blue" Grid.Row="0" Grid.Column="2"/>
+        <TextBlock Text="Hỏa" Background="Red" Grid.Row="1" Grid.Column="2"/>
+        <TextBlock Text="Thổ" Background="Yellow" Grid.Row="2" Grid.Column="0"/>
+        <TextBlock Text="Mộc" Background="Green" Grid.Row="1" Grid.Column="1"/>
+    </Grid>
 </Window>
