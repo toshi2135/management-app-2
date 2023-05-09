@@ -49,11 +49,26 @@
         <TextBlock Text="Thổ" Background="Yellow" Grid.Row="2" Grid.Column="0"/>
         <TextBlock Text="Mộc" Background="Green" Grid.Row="1" Grid.Column="1"/>
     </Grid>-->
-    <UniformGrid Columns="3">
+    <!--<UniformGrid Columns="3">
         <TextBlock Text="Kim" Background="White"/>
         <TextBlock Text="Thủy" Background="Blue"/>
         <TextBlock Text="Hỏa" Background="Red"/>
         <TextBlock Text="Thổ" Background="Yellow"/>
         <TextBlock Text="Mộc" Background="Green"/>
-    </UniformGrid>
+    </UniformGrid>-->
+    <TabControl>
+        <TabItem Header="Kim">
+            <StackPanel>
+                <TextBlock Text="Kim" Background="White"/>
+                <TextBlock Text="Mộc" Background="Green"/>
+                <TextBlock Text="Thủy" Background="Blue"/>
+                <TextBlock Text="Hỏa" Background="Red"/>
+                <TextBlock Text="Thổ" Background="Yellow"/>
+
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Mộc">
+            
+        </TabItem>
+    </TabControl>
 </Window>
