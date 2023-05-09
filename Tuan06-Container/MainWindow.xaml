@@ -31,7 +31,7 @@
         <TextBlock Text="Thổ" Margin="5" DockPanel.Dock="Bottom" Background="Yellow"/>
         <TextBlock Text="Mộc" Margin="5" Background="Green"/>
     </DockPanel>-->
-    <Grid>
+    <!--<Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -48,5 +48,12 @@
         <TextBlock Text="Hỏa" Background="Red" Grid.Row="1" Grid.Column="2"/>
         <TextBlock Text="Thổ" Background="Yellow" Grid.Row="2" Grid.Column="0"/>
         <TextBlock Text="Mộc" Background="Green" Grid.Row="1" Grid.Column="1"/>
-    </Grid>
+    </Grid>-->
+    <UniformGrid Columns="3">
+        <TextBlock Text="Kim" Background="White"/>
+        <TextBlock Text="Thủy" Background="Blue"/>
+        <TextBlock Text="Hỏa" Background="Red"/>
+        <TextBlock Text="Thổ" Background="Yellow"/>
+        <TextBlock Text="Mộc" Background="Green"/>
+    </UniformGrid>
 </Window>
