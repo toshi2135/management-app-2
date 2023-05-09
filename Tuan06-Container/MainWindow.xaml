@@ -6,8 +6,15 @@
         xmlns:local="clr-namespace:Tuan06_Container"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas>
-        <Rectangle Canvas.ZIndex ="9" Width="100" Height="100" Fill="Red"/>
-        <Ellipse Canvas.ZIndex="1" Width="100" Height="100" Fill="Yellow"/>
-    </Canvas>
+    <!--<Canvas>
+        <Rectangle Canvas.ZIndex ="9" Width="100" Height="100" Fill="Red" Canvas.Left="300" Canvas.Top="127"/>
+        <Ellipse Canvas.ZIndex="99" Width="100" Height="100" Fill="Yellow" Canvas.Left="250" Canvas.Top="177"/>
+    </Canvas>-->
+    <StackPanel Background="Black"> <!--Chiều: Từ trên xuống dưới. Độ cao: Vừa đủ-->
+        <TextBlock Text="Kim" HorizontalAlignment="Left" TextAlignment="Center" Width="200" Background="White"/>
+        <TextBlock Text="Mộc" Width="400" Background="Green"/>
+        <TextBlock Text="Thủy" Background="Blue"/>
+        <TextBlock Text="Hỏa" Background="Yellow"/>
+        <TextBlock Text="Thổ" Background="Red"/> 
+    </StackPanel>
 </Window>
