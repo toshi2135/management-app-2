@@ -10,11 +10,18 @@
         <Rectangle Canvas.ZIndex ="9" Width="100" Height="100" Fill="Red" Canvas.Left="300" Canvas.Top="127"/>
         <Ellipse Canvas.ZIndex="99" Width="100" Height="100" Fill="Yellow" Canvas.Left="250" Canvas.Top="177"/>
     </Canvas>-->
-    <StackPanel Background="Black" Orientation="Horizontal"> <!--Chiều: Từ trên xuống dưới. Độ cao: Vừa đủ-->
-        <TextBlock Text="Kim" Background="White"/> <!--<HorizontalAlignment="Left" TextAlignment="Center" Width="200"-->
-        <TextBlock Text="Mộc" Background="Green"/> <!--Width="400"-->
+    <!--<StackPanel Background="Black" Orientation="Horizontal"> --><!--Chiều: Từ trên xuống dưới. Độ cao: Vừa đủ--><!--
+        <TextBlock Text="Kim" Background="White"/> --><!--<HorizontalAlignment="Left" TextAlignment="Center" Width="200"--><!--
+        <TextBlock Text="Mộc" Background="Green"/> --><!--Width="400"--><!--
         <TextBlock Text="Thủy" Background="Blue"/>
         <TextBlock Text="Hỏa" Background="Yellow"/>
         <TextBlock Text="Thổ" Background="Red"/> 
-    </StackPanel>
+    </StackPanel>-->
+    <WrapPanel Background="Black" Orientation="Horizontal">
+        <TextBlock Text="Kim" Width="100" Background="White"/>
+        <TextBlock Text="Mộc" Width="100" Background="Green"/>
+        <TextBlock Text="Thủy" Width="100" Background="Blue"/>
+        <TextBlock Text="Hỏa" Width="100" Background="Yellow"/>
+        <TextBlock Text="Thổ" Width="100" Background="Red"/>
+    </WrapPanel>
 </Window>
