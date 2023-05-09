@@ -64,11 +64,16 @@
                 <TextBlock Text="Thủy" Background="Blue"/>
                 <TextBlock Text="Hỏa" Background="Red"/>
                 <TextBlock Text="Thổ" Background="Yellow"/>
-
             </StackPanel>
         </TabItem>
         <TabItem Header="Mộc">
-            
+            <WrapPanel>
+                <TextBlock Text="Kim" Background="White"/>
+                <TextBlock Text="Mộc" Background="Green"/>
+                <TextBlock Text="Thủy" Background="Blue"/>
+                <TextBlock Text="Hỏa" Background="Red"/>
+                <TextBlock Text="Thổ" Background="Yellow"/>
+            </WrapPanel>
         </TabItem>
     </TabControl>
 </Window>
