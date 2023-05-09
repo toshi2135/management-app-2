@@ -17,11 +17,18 @@
         <TextBlock Text="Hỏa" Background="Yellow"/>
         <TextBlock Text="Thổ" Background="Red"/> 
     </StackPanel>-->
-    <WrapPanel Background="Black" Orientation="Horizontal">
-        <TextBlock Text="Kim" Width="100" Background="White"/>
-        <TextBlock Text="Mộc" Width="100" Background="Green"/>
-        <TextBlock Text="Thủy" Width="100" Background="Blue"/>
-        <TextBlock Text="Hỏa" Width="100" Background="Yellow"/>
+    <!--<WrapPanel Background="Black" Orientation="Horizontal">
+        <TextBlock Text="Kim" Width="100" Height="100" Background="White"/>
+        <TextBlock Text="Mộc" Width="100" Height="100" Background="Green"/>
+        <TextBlock Text="Thủy" Width="100" Height="100" Background="Blue"/>
+        <TextBlock Text="Hỏa" Width="100" Height="100" Background="Yellow"/>
         <TextBlock Text="Thổ" Width="100" Background="Red"/>
-    </WrapPanel>
+    </WrapPanel>-->
+    <DockPanel Background="Black" LastChildFill="True">
+        <TextBlock Text="Kim" Margin="5" Background="White"/>
+        <TextBlock Text="Mộc" Margin="5" Background="Green"/>
+        <TextBlock Text="Thủy" Margin="5" Background="Blue"/>
+        <TextBlock Text="Hỏa" Margin="5" Background="Yellow"/>
+        <TextBlock Text="Thổ" Margin="5" Background="Red"/>
+    </DockPanel>
 </Window>
