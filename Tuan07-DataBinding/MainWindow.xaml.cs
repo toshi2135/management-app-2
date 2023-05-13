@@ -24,5 +24,15 @@ namespace Tuan07_DataBinding
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Student sv = new Student()
+            {
+                ID = "PH12345", 
+                Name = "Nguyễn Văn A" 
+            };
+            this.DataContext = sv; // Thực hiện hàn gắn Entity với Màn hình
+        }
     }
 }

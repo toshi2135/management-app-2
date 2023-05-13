@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tuan07_DataBinding"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Canvas>
+        <Label d:Content="ID SV" Content="{Binding ID}" Canvas.Left="51" Canvas.Top="52"/>
+        <Label d:Content="Name SV" Content="{Binding Name}" Canvas.Left="41" Canvas.Top="83"/>
+    </Canvas>
 </Window>
