@@ -6,10 +6,17 @@
         xmlns:local="clr-namespace:Tuan07_DataBinding"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:CreditsToPercentageConverter x:Key="converter" Maximum="360"/>
+        <local:IntegerToCurrency x:Key="currencyConverter"/>
+    </Window.Resources>
     <Canvas>
+        <Label d:Content="2.000.000 đ" Content="{Binding Path=Amount, Converter={StaticResource currencyConverter}}" Canvas.Left="40" Canvas.Top="137"/>
+        <Image Width="100" Height="100" d:Source="Images/4.jpg" Source="{Binding Path=Avatar}" Canvas.Left="350" Canvas.Top="46"/>
         <Label d:Content="ID SV" Content="{Binding Path=ID}" Canvas.Left="40" Canvas.Top="52" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Label d:Content="Name SV" Content="{Binding Path=Name}" Canvas.Left="40" Canvas.Top="83"/>
-        <Label d:Content="20" Content="{Binding Path=Credits}"/>
-        <ProgressBar Minimum="0" Maximum="360" d:Value="80" Width="200" Height="10" Value="{Binding Path=Credits}" Canvas.Left="40" Canvas.Top="114" />
+        <Label d:Content="20" Content="{Binding Path=Credits}" HorizontalAlignment="Left" Canvas.Top="106" VerticalAlignment="Center" Canvas.Left="40"/>
+        <ProgressBar Minimum="0" Maximum="360" d:Value="80" Width="200" Height="10" Value="{Binding Path=Credits}" Canvas.Left="68" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Label d:Content="30%" Content="{Binding Credits, Converter={StaticResource converter}}" Canvas.Left="273" Canvas.Top="106" />
     </Canvas>
 </Window>

@@ -12,5 +12,7 @@ namespace Tuan07_DataBinding
         public string ID { get; set; }
         public string Name { get; set; }
         public int Credits { get; set; }
+        public string Avatar { get; set; }
+        public int Amount { get; set; }
     }
 }
