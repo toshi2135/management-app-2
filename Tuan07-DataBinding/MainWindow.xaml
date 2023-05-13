@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Canvas>
-        <Label d:Content="ID SV" Content="{Binding Path=ID}" Canvas.Left="41" Canvas.Top="52" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label d:Content="Name SV" Content="{Binding Path=Name}" Canvas.Left="41" Canvas.Top="83"/>
-        <Label d:Content="Credits SV" Content="{Binding Path=Credits}" Canvas.Left="41" Canvas.Top="114" />
+        <Label d:Content="ID SV" Content="{Binding Path=ID}" Canvas.Left="40" Canvas.Top="52" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label d:Content="Name SV" Content="{Binding Path=Name}" Canvas.Left="40" Canvas.Top="83"/>
+        <Label d:Content="20" Content="{Binding Path=Credits}"/>
+        <ProgressBar Minimum="0" Maximum="360" d:Value="80" Width="200" Height="10" Value="{Binding Path=Credits}" Canvas.Left="40" Canvas.Top="114" />
     </Canvas>
 </Window>
