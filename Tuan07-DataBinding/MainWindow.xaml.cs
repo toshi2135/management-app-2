@@ -25,17 +25,26 @@ namespace Tuan07_DataBinding
             InitializeComponent();
         }
 
+        Student _sv = new Student()
+        {
+            ID = "PH12345",
+            Name = "Nguyễn Văn A",
+            Credits = 40,
+            Avatar = "Images/30.jpg",
+            Amount = 2000000
+        };
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Student sv = new Student()
-            {
-                ID = "PH12345", 
-                Name = "Nguyễn Văn A",
-                Credits = 40,
-                Avatar = "Images/30.jpg",
-                Amount = 2000000
-            };
-            this.DataContext = sv; // Thực hiện hàn gắn Entity với Màn hình
+            this.DataContext = _sv; // Thực hiện hàn gắn Entity với Màn hình
+        }
+
+        private void updateButton_Click(object sender, RoutedEventArgs e)
+        {
+            _sv.Amount = 9789000;
+            _sv.Name = "Nguyễn Văn B";
+            _sv.Credits = 300;
+            _sv.Avatar = "Images/58.jpg";
         }
     }
 }

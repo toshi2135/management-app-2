@@ -19,5 +19,6 @@
         <Label d:Content="20" Content="{Binding Path=Credits}" HorizontalAlignment="Left" Canvas.Top="106" VerticalAlignment="Center" Canvas.Left="40"/>
         <ProgressBar Minimum="0" Maximum="360" d:Value="80" Width="200" Height="10" Value="{Binding Path=Credits}" Canvas.Left="68" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center" />
         <Label d:Content="30%" Content="{Binding Credits, Converter={StaticResource converter}}" Canvas.Left="273" Canvas.Top="106" />
+        <Button x:Name="updateButton" Width="80" Height="35" Content="Update" Click="updateButton_Click" Canvas.Left="360" Canvas.Top="151" />
     </Canvas>
 </Window>
