@@ -41,6 +41,9 @@ namespace Tuan07_DataBinding
 
         private void updateButton_Click(object sender, RoutedEventArgs e)
         {
+            // Bước 1: NuGet, cài đặt thư viện PropertyChanged.Fody
+            // Bước 2: Cho lớp Student kế thừa từ interface INotifyPropertyChanged
+            // Bước 3: Bổ sung sự kiện PropertyChanged (Ctrl + .)
             _sv.Amount = 9789000;
             _sv.Name = "Nguyễn Văn B";
             _sv.Credits = 300;
