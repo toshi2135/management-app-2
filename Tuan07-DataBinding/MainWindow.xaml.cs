@@ -32,7 +32,7 @@ namespace Tuan07_DataBinding
                 ID = "PH12345", 
                 Name = "Nguyễn Văn A",
                 Credits = 40,
-                Avatar = "Images/4.jpg",
+                Avatar = "Images/30.jpg",
                 Amount = 2000000
             };
             this.DataContext = sv; // Thực hiện hàn gắn Entity với Màn hình

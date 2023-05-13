@@ -9,10 +9,11 @@
     <Window.Resources>
         <local:CreditsToPercentageConverter x:Key="converter" Maximum="360"/>
         <local:IntegerToCurrency x:Key="currencyConverter"/>
+        <local:RelativeToAbsoluteConverter x:Key="relativeToAbsoluteConverter"/>
     </Window.Resources>
     <Canvas>
         <Label d:Content="2.000.000 đ" Content="{Binding Path=Amount, Converter={StaticResource currencyConverter}}" Canvas.Left="40" Canvas.Top="137"/>
-        <Image Width="100" Height="100" d:Source="Images/4.jpg" Source="{Binding Path=Avatar}" Canvas.Left="350" Canvas.Top="46"/>
+        <Image Width="100" Height="100" d:Source="Images/4.jpg" Source="{Binding Path=Avatar, Converter={StaticResource relativeToAbsoluteConverter}}" Canvas.Left="350" Canvas.Top="46"/>
         <Label d:Content="ID SV" Content="{Binding Path=ID}" Canvas.Left="40" Canvas.Top="52" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Label d:Content="Name SV" Content="{Binding Path=Name}" Canvas.Left="40" Canvas.Top="83"/>
         <Label d:Content="20" Content="{Binding Path=Credits}" HorizontalAlignment="Left" Canvas.Top="106" VerticalAlignment="Center" Canvas.Left="40"/>
