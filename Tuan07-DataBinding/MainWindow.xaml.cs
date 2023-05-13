@@ -30,7 +30,8 @@ namespace Tuan07_DataBinding
             Student sv = new Student()
             {
                 ID = "PH12345", 
-                Name = "Nguyễn Văn A" 
+                Name = "Nguyễn Văn A",
+                Credits = 40
             };
             this.DataContext = sv; // Thực hiện hàn gắn Entity với Màn hình
         }

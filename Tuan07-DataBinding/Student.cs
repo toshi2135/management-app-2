@@ -11,6 +11,6 @@ namespace Tuan07_DataBinding
     {
         public string ID { get; set; }
         public string Name { get; set; }
-
+        public int Credits { get; set; }
     }
 }
