@@ -8,13 +8,14 @@ using System.Windows.Data;
 
 namespace Tuan07_DataBinding
 {
-    class RelativeToAbsoluteConverter : IValueConverter
+    internal class RelativeToAbsoluteConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             string relative = (string)value; // Images/avatar01.jpg
             string folder = AppDomain.CurrentDomain.BaseDirectory; // C:\Documents
             string absolute = $"{folder}{relative}";
+
             return absolute;
         }
 
