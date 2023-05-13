@@ -16,7 +16,7 @@
         <Image Width="100" Height="100" d:Source="Images/4.jpg" Source="{Binding Path=Avatar, Converter={StaticResource relativeToAbsoluteConverter}}" Canvas.Left="350" Canvas.Top="46"/>
         <Label d:Content="ID SV" Content="{Binding Path=ID}" Canvas.Left="40" Canvas.Top="52" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Label d:Content="Name SV" Content="{Binding Path=Name}" Canvas.Left="40" Canvas.Top="83"/>
-        <Label d:Content="20" Content="{Binding Path=Credits}" HorizontalAlignment="Left" Canvas.Top="106" VerticalAlignment="Center" Canvas.Left="40"/>
+        <TextBox d:Text="20" Text="{Binding Path=Credits}" HorizontalAlignment="Center" Canvas.Top="110" VerticalAlignment="Top" Canvas.Left="40"/>
         <ProgressBar Minimum="0" Maximum="360" d:Value="80" Width="200" Height="10" Value="{Binding Path=Credits}" Canvas.Left="68" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center" />
         <Label d:Content="30%" Content="{Binding Credits, Converter={StaticResource converter}}" Canvas.Left="273" Canvas.Top="106" />
         <Button x:Name="updateButton" Width="80" Height="35" Content="Update" Click="updateButton_Click" Canvas.Left="360" Canvas.Top="151" />
