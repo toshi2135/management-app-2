@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BTLTTuan07"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:RelativeToAbsoluteConverter x:Key="relativeToAbsoluteConverter"/>
+    </Window.Resources>
+    <Canvas>
+        <Label d:Content="Book's Name" Content="{Binding Path=Name}" Canvas.Left="360" Canvas.Top="91" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label d:Content="Author" Content="{Binding Path=Author}" Canvas.Left="360" Canvas.Top="141" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label d:Content="Published Year" Content="{Binding Path=PublishedYear}" Canvas.Left="360" Canvas.Top="117"/>
+        <Image d:Source="Images/book.jpg" Source="{Binding Path=CoverImage, Converter={StaticResource relativeToAbsoluteConverter}}" Canvas.Left="84" Canvas.Top="21" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="updateButton" Content="Update" Width="80" Height="35" Click="updateButton_Click" Canvas.Left="566" Canvas.Top="86"/>
+    </Canvas>
 </Window>
