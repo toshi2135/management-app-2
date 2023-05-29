@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace BTLTTuan07_DataBinding
+namespace BTLTTuan07
 {
     /// <summary>
     /// Interaction logic for App.xaml

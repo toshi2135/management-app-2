@@ -1,7 +1,7 @@
-﻿<Application x:Class="BTLTTuan07_DataBinding.App"
+﻿<Application x:Class="BTLTTuan07.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:BTLTTuan07_DataBinding"
+             xmlns:local="clr-namespace:BTLTTuan07"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

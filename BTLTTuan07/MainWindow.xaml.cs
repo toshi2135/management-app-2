@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BTLTTuan07_DataBinding
+namespace BTLTTuan07
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
