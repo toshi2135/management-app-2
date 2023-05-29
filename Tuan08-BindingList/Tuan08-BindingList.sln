@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuan08-BindingList", "Tuan08-BindingList.csproj", "{FC93482A-2F38-4189-AAAB-26670B1E2AD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC93482A-2F38-4189-AAAB-26670B1E2AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC93482A-2F38-4189-AAAB-26670B1E2AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC93482A-2F38-4189-AAAB-26670B1E2AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC93482A-2F38-4189-AAAB-26670B1E2AD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0474A91A-8CA9-4BC5-841B-FE7DD681FE05}
+	EndGlobalSection
+EndGlobal
