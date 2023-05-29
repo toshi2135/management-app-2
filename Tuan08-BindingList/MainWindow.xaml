@@ -10,7 +10,11 @@
         <ComboBox Name="studentsComboBox" Height="30" Width="344" Canvas.Left="210" Canvas.Top="103">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding ID}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding ID}"/>
+                        <TextBlock Text=" - "/>
+                        <TextBlock Text="{Binding Name}"/>
+                    </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
