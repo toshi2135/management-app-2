@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,12 +27,13 @@ namespace Tuan08_BindingList
             InitializeComponent();
         }
 
-        class Student
+        class Student : INotifyPropertyChanged
         {
             public string ID { get; set; }
             public string Name { get; set; }
             public string Avatar { get; set; }
 
+            public event PropertyChangedEventHandler? PropertyChanged;
         }
 
         ObservableCollection<Student> _students;
@@ -39,19 +41,49 @@ namespace Tuan08_BindingList
         {
             _students = new ObservableCollection<Student>()
             {
-                new Student() {ID="PH001", Name="Nguyen Van A", Avatar="Images/1.jpg"},
-                new Student() {ID="PH002", Name="Nguyen Van B", Avatar="Images/2.jpg"},
-                new Student() {ID="PH003", Name="Nguyen Van C", Avatar="Images/3.jpg"},
-                new Student() {ID="PH004", Name="Nguyen Van D", Avatar="Images/4.jpg"},
-                new Student() {ID="PH005", Name="Nguyen Van E", Avatar="Images/5.jpg"},
-                new Student() {ID="PH006", Name="Nguyen Van F", Avatar="Images/6.jpg"},
-                new Student() {ID="PH007", Name="Nguyen Van G", Avatar="Images/7.jpg"},
-                new Student() {ID="PH008", Name="Nguyen Van H", Avatar="Images/8.jpg"},
-                new Student() {ID="PH009", Name="Nguyen Van I", Avatar="Images/9.jpg"},
-                new Student() {ID="PH010", Name="Nguyen Van J", Avatar="Images/10.jpg"},
+                new Student() {ID="001", Name="Nguyen Van A", Avatar="Images/01.jpg"},
+                new Student() {ID="002", Name="Tran Van B", Avatar="Images/44.jpg"},
+                new Student() {ID="003", Name="Pham Van C", Avatar="Images/46.jpg"},
+                new Student() {ID="004", Name="Truong Van D", Avatar="Images/47.jpg"},
+                new Student() {ID="005", Name="Dao Van E", Avatar="Images/63.jpg"},
+                new Student() {ID="006", Name="Vo Van F", Avatar="Images/86.jpg"},
+                new Student() {ID="007", Name="Phan Van G", Avatar="Images/95.jpg"},
+                new Student() {ID="008", Name="Le Van H", Avatar="Images/97.jpg"},
+                new Student() {ID="009", Name="Lam Van I", Avatar="Images/98.jpg"},
+                new Student() {ID="010", Name="Doan Van J", Avatar="Images/99.jpg"},
             };
 
             studentsComboBox.ItemsSource = _students;
+        }
+
+        private void addStudent_Click(object sender, RoutedEventArgs e)
+        {
+            _students.Add(new Student() 
+            { 
+                ID = "011", 
+                Name = "Nguyen Van K", 
+                Avatar = "Images/36.jpg" 
+            });
+        }
+
+        private void deleteStudent_Click(object sender, RoutedEventArgs e)
+        {
+            int i = studentsComboBox.SelectedIndex;
+            if (i >= 0)
+            {
+                _students.RemoveAt(i);
+            }
+        }
+
+        private void updatetudent_Click(object sender, RoutedEventArgs e)
+        {
+            int i = studentsComboBox.SelectedIndex;
+            if (i >= 0)
+            {
+                _students[i].ID = "012";
+                _students[i].Name = "Nguyen Van L";
+                _students[i].Avatar = "Images/36.jpg";
+            }
         }
     }
 }

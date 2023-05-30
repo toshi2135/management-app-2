@@ -6,17 +6,45 @@
         xmlns:local="clr-namespace:Tuan08_BindingList"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:RelativeToAbsoluteConverter x:Key="relativeToAbsoluteConverter"/>
+    </Window.Resources>
     <Canvas>
-        <ComboBox Name="studentsComboBox" Height="30" Width="344" Canvas.Left="210" Canvas.Top="103">
+        <!--<ComboBox Name="studentsComboBox" Height="30" Width="344" Canvas.Left="210" Canvas.Top="103">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding ID}"/>
+                        <Image Source="{Binding Avatar}" Margin="0, 0, 5, 0" Width="16" Height="16"/>
+                        <TextBlock Text="{Binding ID}" FontWeight="Bold"/>
                         <TextBlock Text=" - "/>
-                        <TextBlock Text="{Binding Name}"/>
+                        <TextBlock Text="{Binding Name}" Foreground="Red"/>
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
-        </ComboBox>
+        </ComboBox>-->
+        <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="studentsComboBox" Height="352" Width="780" Canvas.Left="10" Canvas.Top="72" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" Width="100" Height="100">
+                        <Image Source="{Binding Avatar, Converter={StaticResource relativeToAbsoluteConverter}}" Margin="0, 0, 5, 0" Width="50" Height="50"/>
+                        <TextBlock FontWeight="Bold">
+                            <Run Text="{Binding ID}" FontWeight="Bold"/>
+                            -
+                            <Run Text="{Binding Name}" Foreground="Red"/>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel>
+
+                    </WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
+        <Button x:Name="addStudent" Content="Add" Width="80" Height="35" Click="addStudent_Click" Canvas.Left="12" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="deleteStudent" Content="Delete" Width="80" Height="35" Click="deleteStudent_Click" Canvas.Left="112" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="updateStudent" Content="Update" Width="80" Height="35" Click="updatetudent_Click" Canvas.Left="212" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Canvas>
 </Window>
