@@ -9,7 +9,7 @@
     <Window.Resources>
         <local:RelativeToAbsoluteConverter x:Key="relativeToAbsoluteConverter"/>
     </Window.Resources>
-    <Canvas>
+    <DockPanel LastChildFill="True">
         <!--<ComboBox Name="studentsComboBox" Height="30" Width="344" Canvas.Left="210" Canvas.Top="103">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -22,7 +22,12 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>-->
-        <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="studentsComboBox" Height="352" Width="780" Canvas.Left="10" Canvas.Top="72" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Height="50" DockPanel.Dock="Top">
+            <Button x:Name="addStudent" Content="Add" Width="80" Height="35" Click="addStudent_Click" Canvas.Left="12" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="deleteStudent" Content="Delete" Width="80" Height="35" Click="deleteStudent_Click" Canvas.Left="112" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="updateStudent" Content="Update" Width="80" Height="35" Click="updatetudent_Click" Canvas.Left="212" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </StackPanel>
+        <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Padding="10, 10, 0, 0" Name="studentsComboBox">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" Width="100" Height="100">
@@ -37,14 +42,9 @@
             </ListView.ItemTemplate>
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel>
-
-                    </WrapPanel>
+                    <WrapPanel/>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
         </ListView>
-        <Button x:Name="addStudent" Content="Add" Width="80" Height="35" Click="addStudent_Click" Canvas.Left="12" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Button x:Name="deleteStudent" Content="Delete" Width="80" Height="35" Click="deleteStudent_Click" Canvas.Left="112" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Button x:Name="updateStudent" Content="Update" Width="80" Height="35" Click="updatetudent_Click" Canvas.Left="212" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-    </Canvas>
+    </DockPanel>
 </Window>
