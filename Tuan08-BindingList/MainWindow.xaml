@@ -23,9 +23,9 @@
             </ComboBox.ItemTemplate>
         </ComboBox>-->
         <StackPanel Orientation="Horizontal" Height="50" DockPanel.Dock="Top">
-            <Button x:Name="addStudent" Content="Add" Width="80" Height="35" Click="addStudent_Click" Canvas.Left="12" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Button x:Name="deleteStudent" Content="Delete" Width="80" Height="35" Click="deleteStudent_Click" Canvas.Left="112" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Button x:Name="updateStudent" Content="Update" Width="80" Height="35" Click="updatetudent_Click" Canvas.Left="212" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button Margin="5" x:Name="addStudent" Content="Add" Width="80" Height="35" Click="addStudent_Click" Canvas.Left="12" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button Margin="5" x:Name="deleteStudent" Content="Delete" Width="80" Height="35" Click="deleteStudent_Click" Canvas.Left="112" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button Margin="5" x:Name="updateStudent" Content="Update" Width="80" Height="35" Click="updatetudent_Click" Canvas.Left="212" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </StackPanel>
         <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Padding="10, 10, 0, 0" Name="studentsComboBox">
             <ListView.ItemTemplate>
@@ -45,6 +45,26 @@
                     <WrapPanel/>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
+            <ListView.Resources>
+                <ContextMenu x:Key="listViewContextMenu">
+                    <MenuItem Header="Delete" Click="deleteMenu_Click">
+                        <MenuItem.Icon>
+                            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="Images/delete.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Edit" Click="editMenu_Click">
+                        <MenuItem.Icon>
+                            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="Images/edit.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </ListView.Resources>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <Setter Property="ContextMenu" Value="{StaticResource listViewContextMenu}"/>
+                    <EventSetter Event="MouseDoubleClick" Handler="listViewItem_DoubleClick"/>
+                </Style>
+            </ListView.ItemContainerStyle>
         </ListView>
     </DockPanel>
 </Window>
